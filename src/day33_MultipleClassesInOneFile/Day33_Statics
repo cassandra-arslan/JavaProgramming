@@ -1,0 +1,84 @@
+Java day33_Statics
+this: refers to the instances
+
+this. : to call instance variables & instance methods
+this(): used for calling the constructors
+
+Constructor Call Rules:
+1. Constructor can not be called by its name (this() need to be used).
+2. Only an existing constructor can call another constructor.
+3. Constructor call MUST be at the first step.
+4. One constructor can not call more than one constructor.
+5.to overload a constructor the parameters must be different.
+
+
+
+Creating multiple Classes:
+
+**When you create multiple classes in one file there can only be ONE public class.
+
+** your public class name MUST match with the class name
+
+*create a class outside of the package
+-----------------------------------------------------------------------------------------------------------
+
+Static
+•Declared with static keyword
+•Belongs to the class, and can be called through the class
+•There is only one copy of the static shared for all objects of the class
+•All the Objects of the class shares the same copy
+
+
+Static is applicable for the following:
+-Variables
+-Methods
+-Blocks
+-Class
+
+Static Variables
+•Refer to the common property of all objects
+•It gets memory only once in the class area at the time of class loading
+•A single copy of a class ‘s static variable is shared by all objects of the class
+•If changes are made to static variables, all other instances will see the effect of the change
+
+Static Methods
+•If we declare any methods as static, it’s known as static methods
+•A method that can be called using class name, without creating objects
+•Objects can also call static methods
+•Static methods only accept static members
+
+
+Static means there can ONLY BE ONE COPY .. stays the same
+
+Instance means there can be Multiple/different etc
+
+
+Static or instance method?
+Should a methog be static:
+Does it use any fields (instance variables) or instance methods
+YES? it should probably be an instance method
+NO? it should probably be a static method
+
+
+In the Java the keyword static means that the particular member belongs to a type itself, rather than to an instance of that type. This means we'll create only one instance of that static member that is shared across all instances of the class.
+
+~public means that the method is visible and can be called from other objects of other types. Other alternatives are private, protected, package and package-private.
+~static means that the method is not attached to a specific instance, and it has no "this". It is more or less a function. Constant in which block of statement used only 1 time
+~void is the return type. It means "this method returns nothing".
+
+!!!In other words, you don't need to create an instance of the class to access it. -> Static
+```
+public class Foo {
+    public static void doStuff(){
+        // does stuff
+    }
+}
+//So, instead of creating an instance of Foo and then calling doStuff like this:
+
+Foo f = new Foo();
+f.doStuff();
+
+//You just call the method directly against the class, like so:
+
+Foo.doStuff();
+```

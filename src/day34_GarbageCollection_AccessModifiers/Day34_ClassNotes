@@ -1,0 +1,71 @@
+Java Day34
+
+ Java Day34
+Topics:
+		1. Static Continue:
+				static block
+				static import
+
+		2. Garbage Collection
+		3. Access Modifiers: public, private, default
+
+
+package name: day34_GarbageCollection_AccessModifiers
+
+
+static block: used for initializing static variables
+			  gets executed as son as the class is loaded
+			  runs first before everything, only runs one time
+
+			  if the static variables need several steps to be initialized
+
+
+
+Constructors short quiz due by 11:45 am
+
+
+static import vs regular import
+
+		regular import: imports everything from the class
+			import packageName.className;
+			import packageName.*;
+
+
+		static import:
+
+			import static packageName.className.staticMember;  // imports one static member of a class
+			import static packageName.className.*;			 // imports all static members of a class
+
+From julia -
+
+setting up instance variables: use constructor
+setting up static variables: use static block
+
+Quiz question #8; it's constructor chaining, you need to figure out which constrcutor is chained to which one and when one constructor gets executed the one that's chained to it will also get executed.
+
+
+InterviewQuestion:
+Can a class be static?
+yes, but only if there is a nested class and if the inner class contains the static keyword.
+
+Classes can be nested, we can have outer and inner classes in Java
+
+in Java every single file can only be ONE java class
+
+in order to be static it has to be a member of a class
+
+classes do not have any memory
+
+Static variables - if there is a common value for all the objects
+
+Static Methods - if the method doesnt need instance variables or methods (advantage - uses less memory and you dont need an object you can just call it through the classroom)
+
+Static Blocks - used to initialize static variables, if the variable has several steps, gets executed as soon as class is loaded. Runs first before everything, only runs one time. IIf the static
+
+Static Class- only inner class can be static, once inner class is static it can be called through the outer class
+
+Regular import statement- import packageName.className; imports everything from a class. import packageName.;
+
+Static Import -  first you give the import keyword, and then the second keyword is static so the complire knows the members you want to import are static, 3rd is the packageName, then the class name, static members are placed inside the class
+---------------> import static packageName.className.staticMember; // imports ONE static member of a class
+ but if you want to import everything you add . at the end like so ->import static packageName.className.*; //imports all the static members of a class .

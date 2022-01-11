@@ -1,0 +1,46 @@
+Java Day27
+Topic: Wrapper Classes
+
+package: day27_WrapperClasses
+
+Wrapper Classes
+
+~ presented in "java.lang" and is imported implicitly which means we don't have to import it
+
+helps us to wrap primitive types to classes of that type.
+
+Primitives -  byte short int long float double char boolean
+Wrapper Classes -  Byte Short Integer Long Float Double Character Boolean
+
+Autoboxing vs unboxing:
+~autoboxing converts primitive into wrapper class object
+~unboxing converts wrapper class object into primitive
+
+Primitives        ---          Wrapper Class
+boolean                        Boolean
+byte                           Byte
+short         Auto Boxing      Short
+int           ----------->     Integer
+float                          Float
+long           Unboxing        Long
+double        <-----------     Double
+char                           Character
+
+
+autoboxing - (implicit)
+
+unboxing - (implicit)
+
+parse methods - converting string to primitive types. at the end returns primitive
+
+valueOf methods - converts strings to wrapper class objects, returns wrapper class object
+
+
+
+Data Structures: A data structure is a particular way of organizing data in a computer so that it can be used effectively.
+
+1. Array - supports primitive & non primitives
+
+2. Collection - ONLY supports Non-primitives
+
+3. Map - ONLY supports non-primitives

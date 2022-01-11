@@ -1,0 +1,176 @@
+Java Day35
+Topic: OOP Encapsulation
+
+package name: day35_Encapsulation
+Encapsulation
+
+
+Quick Review on custom methods:
+~in order to create objects use constructor, to help us set every single instances
+~static block is designed for initializing the static methods
+//ExcelSheet 1st locate the file 2 read file 3 handle exceptions 4 add rows, columns and set to variable (If variable is instance you need constructor) static block initializer for multiple variables. In order to use the static variables you call them through a class.
+1st executed is the static block, only gets executed 1 time.
+~objects can also share everything that the class has.
+~static only has ONE copy
+
+~pre condition for class to be static? a nested class, only inner class can be static
+
+~toString is an instance method
+
+~to create object use new keyword and constructor
+======================================================================================================
+
+OOP PRINCIPLES
+
+• There are 4 Object Oriented Programming (OOP) principles: • Encapsulation
+• Inheritance
+• Abstraction
+• Polymorphism
+• OOP: is A design pattern of the applications in an organized and modular way
+
+Encapsulation (Data Hiding)
+• An object hides its internal data from code that’s outside the class
+• Only the current class’ methods can directly access and make changes to the instance
+variables
+• Hide an instance variable by giving private access modifier, and making the methods that access those fields public
+• These public methods are called getters & setters (accessor and mutator)
+
+******We have to remember though that Java is not a full oop language: because it has primitives data types.
+
+Private & Public Access modifiers
+
+private: When the private access modifier is applied to a class member, the member can not be accessed by code outside the class.
+
+public: When the public access modifier is applied to a class member, the member can be accessed by code inside the class or outside.
+
+Getters & Setters
+• Both are public instance methods, used to protect our data and make our code more secure
+• Getter is used for reading the private data (instance variable) only
+• Setter is used for writing (modifying) the private data (instance variable) only
+
+Getters Method
+• An instance return method that returns the private instance variable
+• Does not pass any parameter
+• Return type must match with the data type of the private instance variable
+```
+public class Person{
+	private int age;
+	public int getAge(){
+	return age;
+	}
+}
+```
+~must be careful in giving the right return type for the Getter, the return type has to match with the date type of the instance variable.
+
+Setter Method:
+• An instance method with the return type of void
+• Passes a parameter, and parameter will be assigned to the private instance variable
+• Data type of the parameter must match with the data type of the private instance variable
+```
+public class Person{
+	private String name;
+	public void setName(String name){
+	this.name = name;
+	}
+}
+```
+
+• Attributes of Person class objects can only be accessed or modified by getters and setters
+
+{as a developer
+we want to control over accessing our variables
+we want to control over assigning value inside the variables
+we want to control which user set the variable or which user only get the variable
+you can think like this}
+
+Encapsulation: hiding the fileds by giving private access modifiers
+
+			  use getter/setter to read/write the private data
+
+
+			  Getter (Read Only): public instance method
+			  					  Return type is not void
+			  					  Return type must match with private instance variable' data type
+			  					  Does not pass any parameter
+			  					  Returns the private instance variables value
+
+			  Setter (Write Only): public instance method
+			  					   Return type is void
+			  					   Passes a parameter
+			  					   Parameter' data type must match with private instance variable' data type
+			  					   reassigns the private instance variable to given argument
+
+
+
+
+
+use the data:
+	1. read
+	2. write
+
+warmup tasks:
+	1. Create a class named Person:
+			Variables:
+				name, age, gender, language, planet, isHuman, hasNose, numberOfWings, numberOfHead
+
+			Add a constructor to initialize all the fields
+
+			Add a static block to initialize all the statics
+
+			Methods:
+				printPlanetName()
+				eat(String food)
+				drink(String drink)
+				toString()
+
+
+	2. create a class named CybertekStudent
+            Variables:
+                name, gender, age, batchNumber, groupNumber, schoolName, fieldOfStudy, programmingLanguage, secretCode
+
+            Add a constructor to initialize all the fields
+
+            Add a static block to initialize all the statics
+
+            methods:
+                printSchoolName();
+                printSecretCode();
+                attendClass():
+                study()
+                toString()
+
+
+
+
+
+Task:
+	1. Create an Employee Class:
+			private variables:
+				name, gender, age, salary
+
+			Encapsulate all the private fields
+
+				1. Name can not be empty
+				2. gender can not anything other than female or male
+				3. age can not be less than 16, and greater than 90
+				4. salary can not be zero or negative
+
+
+	2. Create a class named Circle
+
+			private variables:
+				radius
+
+			public variable:
+				pi
+
+		 	Encapsulate all the private fields
+
+		 			1. radius of the circle can not be zero or negative
+
+ 			Add a constructor that can set the raidus of coircle when circle object is created
+
+ 			Methods:
+ 				calcArea()
+ 				calcPerimeter()
+ 				toString()

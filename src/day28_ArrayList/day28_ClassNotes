@@ -1,0 +1,104 @@
+Java Day28
+Topic: ArrayList
+
+package name: day28_ArrayList
+
+Insert:
+
+	arr = {1,2,3,4,5};
+
+	insert(arr, 2, 40) ==> {1,2, 40,3,4,5 }
+
+Data Structure:
+	Array: size is fixed, supports both primitives & non primitives
+	Collection: size is dynamic, does not support primitives
+
+
+ArrayList: part of the collection. internally uses the array
+
+
+ArrayList Methods:
+	add(Data): adds the data after the last index of the ArrayList
+
+	add(index, Data): inserts the data at the given index
+
+	size(): returns the total number of elements
+
+	get(index): returns the element at the given index
+
+
+	set(index,  Data): replaces the element at given index with the new element.
+
+
+	remove(int index): removes the element at the given index
+
+	remove(Object): removes the given object from arraylist, returns boolean
+
+	clear(): remove all the elements of the arraylist, size will be 0
+
+	indexOf(Data): returns the first matching element's index number, returns int
+
+	lastIndexOf(Data): returns the last matching element's index number, returns int
+
+	contains(Data): returns true if the element is contained in the arraylist, otherwise returns false
+
+	equals(ArrayList): returns true if two arraylists are equal (same elements in same order), otherwise returns false
+
+
+
+	From Julia:
+
+	ArrayList:
+    a collection, size is not fixed its automatically adjusted, it allows us to add and remove. Doesnt support primitives.
+    **the only data structure in java that supports primitives is Arrays.
+
+    - allows us to store objects
+    - presented in "java.util" package
+    - size is automatically adjusted (has add and remove functions)
+    - does not support primitives
+
+
+                                       ** import java.util.ArrayList; **
+
+
+    Creating an ArrayList:
+
+                           ArrayList< DataType > name = new ArrayList< DataType >();
+
+                                         ^                                ^
+                                     Mandatory                        Optional ( you dont have to specify it here.. it is already implied..BUT if you choose to make sure it is the SAME)
+
+                            !! Data type of the ArrayList can not be a primitive type !!
+
+     -make sure to create meaningful name
+
+    --increased by one
+    - accepts duplicate elements
+    - has to be non-primitive
+
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    ArraysList Methods
+
+
+    Method Name:
+    add()        size()            get()
+    set()        remove()          clear()
+    indexof()    lastindexOf()     contains()
+    equals       isEmpty()         containsAll()
+    addAll()     removeAll()       retainAll()
+
+
+    add(element):  adds the elements into the arrayList, size will be increased by 1 and you dont need to specify a number of elements you will have in you ArrayList, it does it for you.
+
+    size(): returns the total number of elements of the ArrayList, return type is int.. will tell you how many elements you have in your ArrayList.
+
+    get(index): returns the elements at the given index from the arrayList. All we have to do is provide the index number of elements we want to get.
+
+    set(index, newElement): replaces the element of the arrayList at the given index to the new element.
+
+    remove(int, index): removes the element at the given index from the ArrayList. if boolean gives us true then the variable was removed.
+
+    clear(): removes all the objects from the ArrayList.. size will be set to zero.
+
+    lastIndexOf(element): returns the index number of the last matching element from the ArrayList, return type is int.

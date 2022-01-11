@@ -1,0 +1,33 @@
+STRING
+    Strigs are immutable(cannot be changed/modified)
+    Whenever we change the String,it will always create new String object in the memory
+    String word="java";    word.word.toUpperCase();==>There are 2 objects->java and JAVA
+
+                   STRINGBUILDER/BUFFER
+    String are used a lot, and we have to modify them a lot.It will cost huge space in the memory,
+    To adress this issue 2 classes makes String mutable
+    StringBuilder->is not thread safe, so it is faster
+    StringBuffer ->is thread safe, it is slower
+          *How to create->StringBuilder stb = new StringBuilder("apples");
+          *Methods
+    stb.append("grapes");//adds,there is only one object in the memory even though we add grapes
+    stb.delete(start,end);
+    stb.reverse();
+    stb.deleteCharAt(index);
+    stb.insert(index,String);==>stb="keyboard";  stb.insert(3,"-")-->key-board
+    stb.replace(start,end,String);//it replace starting and ending index psotion with given String
+        StringBuilder stb2 = new StringBuilder();
+        stb2.append("java");
+        System.out.println(stb2);
+        stb2.append(",SQL"+", C#").append(", HTML");
+        System.out.println(stb2);
+
+    How to compare StringBuilder?
+ StringBuilder builder1 = new StringBuilder("java");
+        StringBuilder builder2 = new StringBuilder("java");
+
+        System.out.println(builder1 == builder2);//false because they are different object
+        System.out.println(builder1.equals(builder2));//false. equals method in StringBuilder also check if both of them are same memory location
+        //HHOW DO WE COMPARE??!!==> Convert to String then call string'equals method
+        boolean isEqual = builder1.toString().equals(builder2.toString());//This is only way to compare. it will go each value in the array and check if they match
+        System.out.println(isEqual);
