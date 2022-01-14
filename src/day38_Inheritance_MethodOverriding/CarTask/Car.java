@@ -1,4 +1,4 @@
-package day38_Inheritance_MethodOverriding;
+package day38_Inheritance_MethodOverriding.CarTask;
 
 public class Car {
     public String make, model, color;
