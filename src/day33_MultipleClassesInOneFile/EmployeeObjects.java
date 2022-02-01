@@ -18,6 +18,9 @@ public class EmployeeObjects {
         System.out.println(employee1.name+" : "+df.format(employee1.salary));
         System.out.println(employee2.name+" : "+df.format(employee2.salary));
         System.out.println(employee3.name+" : "+df.format(employee3.salary));
+
+        System.out.println(employee1.isHuman);
+        System.out.println(Employee.isHuman);
     }
 
 }
