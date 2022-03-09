@@ -16,6 +16,10 @@ public class JavaShortPractice {
         String str = "123";
         int num1 = Integer.parseInt(str);
         System.out.println(num1);
+        int num2 = num1+7;
+        System.out.println(num2);
+
+
 
         //valueOf methods: converting strings to wrapper class objects, returns wrapper class object
         String str2 = "1.5";
