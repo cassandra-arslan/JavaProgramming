@@ -13,6 +13,8 @@ public class ArrayListMethods2 {
         list.add(400);
         list.add(500);
 
+
+        System.out.println(list.get(list.size()-1));
         System.out.println(list);
         //int num = 1;
         //list.remove(num);

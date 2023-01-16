@@ -2,12 +2,13 @@ package ArrayLists;
 import java.util.*;
 public class RepeatAll {
     //create your method below
-   // public static ArrayList<Boolean> repeatAll(ArrayList<Boolean> isRepeated){
-
-    //}
-
-
-
+    public static ArrayList<Boolean> repeatAll(ArrayList<Boolean> isRepeated){
+        ArrayList<Boolean> result = new ArrayList<>(isRepeated);
+        for(int i= 0, j= 0; i<isRepeated.size(); i++, j++){
+            result.add(isRepeated.get(i));
+        }
+        return result;
+    }
     // Do not touch below
 
     public static void main(String[] args) {
@@ -18,6 +19,6 @@ public class RepeatAll {
             list.add(in.nextBoolean());
         }
 
-        //System.out.println(repeatAll(list));
+        System.out.println(repeatAll(list));
     }
 }

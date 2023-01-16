@@ -1,0 +1,68 @@
+Browsers Task:
+	1. Create an interface named SearchContext
+				Abstract methods:
+					findElement(String locator);
+					findElements(String locator);
+
+	2. Create a child interface of SearchContext named WebDriver
+				Abstract methods (return-type is void):
+					get(String url);
+					close();
+					quit();
+					getTitle();
+
+	3. Create an interface named TakeScreenShot:
+				Abstract methods:
+					takeScreenShot();
+
+	4. Creat an interface named JavaScriptExecuter
+				Abstract methods:
+					executeScript(String script);
+
+	5. Create a class named RemoteWebDriver that implements WebDriver, TakeScreenShot, and JavaScriptExecuter Interface:
+				Variables:
+					browserName (final)
+
+				Encapsulate all the fileds
+
+				Add Constructor that can set the fileds and displays the following message:
+							"Opening "+ browserName+" browser"
+
+				Overriden methods and thier implementations:
+						get(String url):
+								"Getting the "+url+" on " + browserName + " browser"
+
+						findElement(String locator):
+								browserName+" driver locating an element by " + locator
+
+						findElements(String locator):
+								browserName+" driver locating multiple elements by " + locator
+
+						close():
+							"Closing the tab on "+browserName+" browser"
+
+						quit():
+							"Quiting the "+browserName+" browser"
+
+						getTitle():
+							browserName + "driver is getting the title"
+
+						takeScreenShot():
+							"Taking screenshot on: " + browserName + " browser"
+
+						executeScript(String script):
+							"Executing \"" + script + "\" script on" + broserName +" browser"
+
+
+	6. Create thefollowing sub classes of RemoteDriver
+				1. ChromeDriver
+				2. FireFoxDriver
+				3. EdgeDriver
+				4. SafariDriver
+				5. OperaDriver
+
+
+	7. Create a class named DriverObjects:
+				Create objects of each driver
+
+				Test all the methods of each driver

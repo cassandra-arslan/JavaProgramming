@@ -18,4 +18,6 @@ public class FrequencyOfChar {
         }
         System.out.println(ch+ " occurs "+count+" times.");
     }
+
 }
+
