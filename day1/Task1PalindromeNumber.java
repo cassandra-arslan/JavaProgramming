@@ -16,6 +16,7 @@ public class Task1PalindromeNumber {
             Given n = 1264628 -> not palindrome
      */
 
+
     public static void main(String[] args) {
 
         int n = 12321;
