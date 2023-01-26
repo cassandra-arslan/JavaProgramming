@@ -15,6 +15,8 @@ public class Task1MethodMiniTasks {
 
         System.out.println(capitalize("java is cool. i LOVE to program. i want TO KEEP LEARNING."));
         System.out.println(capitalize2("java is cool. i LOVE to program. i want TO KEEP LEARNING."));
+
+
     }
 
     // create a method that will accept a number and return the cube of that given number. 2 cubed is 2 * 2 * 2 = 8
@@ -73,8 +75,8 @@ public class Task1MethodMiniTasks {
         String fixed = "";
 
         while(str.contains(".")){
-            String sentence = str.substring(0, str.indexOf(".") + 1);
-            fixed += sentence.substring(0,1).toUpperCase() + sentence.substring(1).toLowerCase();
+            String sentence = str.substring(0, str.indexOf(".")+1).trim();
+            fixed += sentence.substring(0,1).toUpperCase() + sentence.substring(1).toLowerCase()+" ";
             str = str.replace(sentence, "");
 
         }
